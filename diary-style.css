@@ -1,0 +1,851 @@
+
+/* =========================
+   MY LITTLE DIARY
+   PINK COQUETTE THEME
+========================= */
+
+:root {
+  --pink: #e99bb8;
+  --dark-pink: #c96f94;
+  --light-pink: #fff0f5;
+  --soft-pink: #fff8fa;
+  --cream: #fffdfb;
+  --text: #765766;
+  --muted: #ad8d9b;
+  --border: #f4dce6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--soft-pink);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 248, 250, 0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.logo span {
+  color: var(--dark-pink);
+}
+
+.navbar nav {
+  display: flex;
+  gap: 28px;
+}
+
+.navbar nav a {
+  font-size: 13px;
+  color: var(--text);
+  transition: .3s;
+}
+
+.navbar nav a:hover {
+  color: var(--dark-pink);
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: none;
+  color: var(--dark-pink);
+  font-size: 25px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 570px;
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 20%, #ffe0eb 0, transparent 25%),
+    radial-gradient(circle at 85% 75%, #f9dce8 0, transparent 25%),
+    var(--soft-pink);
+}
+
+.hero-decoration {
+  font-size: 45px;
+  color: var(--pink);
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  color: var(--dark-pink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 17px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 7vw, 65px);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.hero h1 span,
+.section-heading h2 span {
+  color: var(--dark-pink);
+  font-style: italic;
+}
+
+.hero-text {
+  max-width: 430px;
+  line-height: 1.8;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 22px 0 30px;
+}
+
+.main-btn {
+  border: none;
+  display: inline-block;
+  background: var(--dark-pink);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 13px;
+  box-shadow: 0 7px 20px #e99bb840;
+  transition: .3s;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  background: #b95f84;
+}
+
+.hero-flower {
+  position: absolute;
+  right: 12%;
+  bottom: 45px;
+  font-size: 55px;
+  color: #e9a9c1;
+}
+
+/* QUOTE */
+
+.quote-section {
+  background: white;
+  text-align: center;
+  padding: 45px 20px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.quote-section span {
+  color: var(--pink);
+  font-size: 28px;
+}
+
+.quote-section p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.quote-section small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* GENERAL SECTION */
+
+.section {
+  padding: 90px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 43px);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* DIARY FORM */
+
+.diary-card,
+.memory-card {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: 0 10px 35px #e99bb815;
+}
+
+.diary-card label,
+.memory-card label {
+  display: block;
+  margin: 20px 0 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.diary-card input,
+.diary-card textarea,
+.memory-card input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--soft-pink);
+  padding: 14px;
+  border-radius: 12px;
+  outline: none;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.diary-card input:focus,
+.diary-card textarea:focus,
+.memory-card input:focus {
+  border-color: var(--pink);
+}
+
+.diary-card textarea {
+  resize: vertical;
+  line-height: 1.8;
+}
+
+.mood-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mood-options button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--soft-pink);
+  font-size: 21px;
+  transition: .2s;
+}
+
+.mood-options button.selected {
+  background: #f8d6e4;
+  border: 2px solid var(--dark-pink);
+  transform: scale(1.1);
+}
+
+.save-btn {
+  width: 100%;
+  margin-top: 25px;
+}
+
+/* ENTRIES */
+
+.entries-section {
+  background: #fff0f5;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  padding: 14px 20px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  outline: none;
+  background: white;
+  color: var(--text);
+}
+
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.entry-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  overflow-wrap: anywhere;
+}
+
+.entry-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  margin: 10px 0;
+}
+
+.entry-card p {
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  margin: 12px 0;
+}
+
+.entry-meta {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.entry-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.entry-actions button {
+  border: none;
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: var(--light-pink);
+  color: var(--dark-pink);
+  font-size: 11px;
+}
+
+.empty-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 30px;
+}
+
+/* MEMORIES */
+
+.memory-card {
+  margin-bottom: 35px;
+}
+
+.memory-card .main-btn {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.memory-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.memory-item {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 18px;
+}
+
+.memory-item img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.memory-item p {
+  padding: 12px 5px;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+.memory-item button {
+  width: 100%;
+  border: none;
+  background: var(--light-pink);
+  color: var(--dark-pink);
+  padding: 9px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+/* CALENDAR */
+
+.calendar-card {
+  max-width: 550px;
+  margin: auto;
+  background: white;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.calendar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.calendar-top h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+}
+
+.calendar-top button {
+  border: none;
+  background: var(--light-pink);
+  color: var(--dark-pink);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 22px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.calendar-grid div {
+  padding: 10px 0;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.calendar-grid .day-name {
+  color: var(--dark-pink);
+  font-weight: 700;
+}
+
+.calendar-grid .has-entry {
+  background: #f9d9e6;
+  color: #a94f75;
+  font-weight: 700;
+}
+
+.calendar-grid .today {
+  border: 1px solid var(--dark-pink);
+}
+
+.calendar-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 55px 20px;
+  background: #f9e1eb;
+}
+
+footer div {
+  font-size: 35px;
+  color: var(--dark-pink);
+}
+
+footer h2 {
+  font-family: 'Playfair Display', serif;
+  margin: 12px 0;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+footer small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 17px 6%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 22px;
+    gap: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 500px;
+    padding: 80px 20px;
+  }
+
+  .hero-flower {
+    right: 7%;
+    bottom: 20px;
+    font-size: 35px;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .diary-card,
+  .memory-card {
+    padding: 23px;
+  }
+
+  .calendar-card {
+    padding: 18px 12px;
+  }
+
+  .calendar-grid {
+    gap: 4px;
+  }
+}
+
+/* =========================
+   COQUETTE DIARY COVER
+========================= */
+
+.welcome-cover {
+  min-height: 90vh;
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 20%, #ffe0eb, transparent 30%),
+    radial-gradient(circle at 85% 80%, #f8d9e7, transparent 30%),
+    #fff5f8;
+}
+
+.cover-card {
+  max-width: 520px;
+  width: 100%;
+  padding: 55px 25px;
+  background: #fffafd;
+  border: 2px solid #f4d6e3;
+  border-radius: 35px;
+  box-shadow: 0 15px 40px #d98ba51c;
+  outline: 1px dashed #eab0c5;
+  outline-offset: -12px;
+}
+
+.cover-bow {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+
+.cover-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 8vw, 55px);
+  font-weight: 500;
+  color: #765766;
+}
+
+.cover-card h1 span {
+  color: #d8799e;
+  font-style: italic;
+}
+
+.cover-message {
+  max-width: 320px;
+  margin: 20px auto;
+  color: #ad8d9b;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.cover-flower {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.cover-footer {
+  margin-top: 25px;
+  color: #c28ba2;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* SOFT COQUETTE ANIMATION */
+
+@keyframes softAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cover-card {
+  animation: softAppear 1s ease both;
+}
+
+.cover-bow {
+  animation: bowFloat 3s ease-in-out infinite;
+}
+
+@keyframes bowFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(3deg);
+  }
+}
+
+/* FLOATING FLOWER DECORATIONS */
+
+.welcome-cover::before,
+.welcome-cover::after {
+  position: absolute;
+  font-size: 38px;
+  color: #e9a3bd;
+  animation: flowerFloat 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.welcome-cover::before {
+  content: "✿";
+  top: 15%;
+  left: 10%;
+}
+
+.welcome-cover::after {
+  content: "❀";
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 1s;
+}
+
+@keyframes flowerFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(15deg);
+  }
+}
+
+/* =========================
+   THEME SELECTOR
+========================= */
+
+.theme-section {
+  text-align: center;
+  padding: 65px 20px;
+  background: white;
+}
+
+.theme-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.theme-section h2 span {
+  color: var(--dark-pink);
+  font-style: italic;
+}
+
+.theme-description {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.theme-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.theme-btn {
+  padding: 13px 22px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text);
+  transition: .3s;
+}
+
+.theme-btn:hover {
+  transform: translateY(-5px);
+}
+
+.pink-theme {
+  background: #fff0f5;
+}
+
+.lavender-theme {
+  background: #f0eaff;
+}
+
+.blue-theme {
+  background: #eaf5ff;
+}
+
+.theme-btn.active {
+  border: 2px solid var(--dark-pink);
+  box-shadow: 0 5px 15px #d98ba530;
+}
+
+/* =========================
+   MY LITTLE PROFILE
+========================= */
+
+.profile-section {
+  padding: 70px 20px;
+  background: #fff0f5;
+  text-align: center;
+}
+
+.profile-card {
+  max-width: 480px;
+  margin: auto;
+  padding: 35px 25px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  box-shadow: 0 12px 30px #d98ba51a;
+}
+
+.profile-avatar {
+  width: 115px;
+  height: 115px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--light-pink);
+  border: 4px solid white;
+  outline: 2px solid var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  overflow: hidden;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.profile-description {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 12px 0 22px;
+}
+
+.profile-card input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--soft-pink);
+  outline: none;
+  color: var(--text);
+}
+
+.profile-card input[type="file"] {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.photo-label {
+  display: block;
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--dark-pink);
+  font-weight: 600;
+}
+
+.profile-card .main-btn {
+  width: 100%;
+  margin-top: 12px;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Little Diary ♡</title>
+
+  <link rel="stylesheet" href="diary-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">my little diary <span>♡</span></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#write">Write</a>
+      <a href="#memories">Memories</a>
+      <a href="#calendar">Calendar</a>
+    </nav>
+  </header>
+
+  <main>
+
+<section class="welcome-cover" id="welcomeCover">
+  <div class="cover-card">
+    <div class="cover-bow">🎀</div>
+    <p class="eyebrow">A LITTLE BOOK OF MEMORIES</p>
+    <h1>My Little <span>Diary</span></h1>
+    <p class="cover-message">
+      A tiny place for all my thoughts,
+      dreams and precious little moments.
+    </p>
+    <div class="cover-flower">🌷 ♡ 🌸</div>
+    <button class="main-btn" id="openDiary">
+      Open my diary ♡
+    </button>
+    <p class="cover-footer">Made with love, just for you</p>
+  </div>
+</section>
+
+<!-- MY LITTLE PROFILE -->
+<section class="profile-section">
+  <div class="profile-card">
+    <div class="profile-avatar" id="profileAvatar">
+      🌷
+    </div>
+
+    <p class="eyebrow">A LITTLE INTRODUCTION</p>
+    <h2 id="welcomeName">Welcome, sweetheart! ♡</h2>
+    <p class="profile-description">
+      Let's make this little diary yours.
+    </p>
+
+    <input
+      type="text"
+      id="profileName"
+      placeholder="Your lovely nickname..."
+    >
+
+    <label for="profilePhoto" class="photo-label">
+      Choose profile photo ♡
+    </label>
+
+    <input
+      type="file"
+      id="profilePhoto"
+      accept="image/*"
+    >
+
+    <button class="main-btn" id="saveProfile">
+      Save my profile 🎀
+    </button>
+  </div>
+</section>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="hero-decoration">୨୧</div>
+      <p class="eyebrow">A LITTLE SPACE JUST FOR YOU</p>
+      <h1>Dear Diary, <br><span>this is my little world.</span></h1>
+      <p class="hero-text">
+        A place to keep your thoughts, feelings, little moments
+        and beautiful memories.
+      </p>
+      <a href="#write" class="main-btn">Write your story ♡</a>
+      <div class="hero-flower">✿</div>
+    </section>
+
+<!-- THEME SELECTOR -->
+<section class="theme-section">
+  <p class="eyebrow">MAKE IT YOURS</p>
+  <h2>Choose your <span>favorite color</span></h2>
+  <p class="theme-description">
+    Pick a color that feels like you ♡
+  </p>
+
+  <div class="theme-options">
+    <button class="theme-btn pink-theme" data-theme="pink">
+      🎀 Pink
+    </button>
+
+    <button class="theme-btn lavender-theme" data-theme="lavender">
+      🪻 Lavender
+    </button>
+
+    <button class="theme-btn blue-theme" data-theme="blue">
+      🦋 Baby Blue
+    </button>
+  </div>
+</section>
+
+    <!-- QUOTE -->
+    <section class="quote-section">
+      <span>♡</span>
+      <p id="dailyQuote">You deserve a life that feels as good as it looks.</p>
+      <small>A little reminder for today</small>
+    </section>
+
+    <!-- WRITE DIARY -->
+    <section class="section" id="write">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR PRIVATE CORNER</p>
+        <h2>Write your <span>feelings</span></h2>
+        <p>Every little thought deserves a place to stay.</p>
+      </div>
+
+      <div class="diary-card">
+        <label for="diaryTitle">Title of your story</label>
+        <input type="text" id="diaryTitle" placeholder="Give your day a title...">
+
+        <label for="diaryDate">Date</label>
+        <input type="date" id="diaryDate">
+
+        <label>How are you feeling?</label>
+        <div class="mood-options" id="moodOptions">
+          <button type="button" data-mood="Happy">😊</button>
+          <button type="button" data-mood="Loved">🥰</button>
+          <button type="button" data-mood="Sad">🥺</button>
+          <button type="button" data-mood="Tired">😴</button>
+          <button type="button" data-mood="Calm">🦋</button>
+        </div>
+
+        <label for="diaryContent">Your story</label>
+        <textarea id="diaryContent" rows="7" placeholder="Dear diary, today..."></textarea>
+
+        <button class="main-btn save-btn" id="saveDiary">
+          Save my story ♡
+        </button>
+      </div>
+    </section>
+
+    <!-- DIARY ENTRIES -->
+    <section class="section entries-section">
+      <div class="section-heading">
+        <p class="eyebrow">LITTLE PIECES OF MY LIFE</p>
+        <h2>My diary <span>entries</span></h2>
+      </div>
+
+      <input type="search" id="searchDiary" class="search-input" placeholder="Search your stories...">
+
+      <div id="diaryEntries" class="entries-grid">
+        <p class="empty-message">Your little stories will appear here ♡</p>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section class="section" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">COLLECTING LITTLE MOMENTS</p>
+        <h2>My sweet <span>memories</span></h2>
+        <p>Keep your favorite moments close to your heart.</p>
+      </div>
+
+      <div class="memory-card">
+        <label for="memoryCaption">Memory caption</label>
+        <input type="text" id="memoryCaption" placeholder="A beautiful day...">
+
+        <label for="memoryPhoto">Choose your photo</label>
+        <input type="file" id="memoryPhoto" accept="image/*">
+
+        <button class="main-btn" id="saveMemory">Save memory ♡</button>
+      </div>
+
+      <div id="memoryGallery" class="memory-gallery">
+        <p class="empty-message">Your memories will bloom here 🌷</p>
+      </div>
+    </section>
+
+    <!-- CALENDAR -->
+    <section class="section" id="calendar">
+      <div class="section-heading">
+        <p class="eyebrow">A DATE TO REMEMBER</p>
+        <h2>My little <span>calendar</span></h2>
+        <p>Days filled with stories and memories.</p>
+      </div>
+
+      <div class="calendar-card">
+        <div class="calendar-top">
+          <button id="prevMonth">‹</button>
+          <h3 id="monthYear"></h3>
+          <button id="nextMonth">›</button>
+        </div>
+
+        <div class="calendar-grid" id="calendarGrid"></div>
+        <p class="calendar-note">♡ Pink dates mean you have a diary entry.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>୨୧</div>
+    <h2>Made with love ♡</h2>
+    <p>Every little moment matters.</p>
+    <small>Shrlijlti© 2026</small>
+  </footer>
+
+  <script src="diary-script.js"></script>
+</body>
+</html>
